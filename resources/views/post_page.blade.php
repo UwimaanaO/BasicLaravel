@@ -46,7 +46,7 @@
             <td>
                 <img height="400px" width="400px" src="post/{{ $post->image}}" alt="">
             </td>
-            <td ><a href="{{ url('update_post') }}" class="btn btn-warning">Update</a></td>
+            <td ><a onclick="return confirm('Are you sure you want to update the post?');" href="{{ url('update_post', $post->id) }}" class="btn btn-warning">Update</a></td>
             <td><a onclick="return confirm('Are you sure you want to delete the post?');" href="{{ url('delete_post', $post->id) }}" class="btn btn-danger">Delete</a></td>
         </tr>
  @endforeach
